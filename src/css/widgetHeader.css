@@ -1,0 +1,12 @@
+.widget-container_header {
+  min-width: 22rem;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+}
+
+.widget-container_header h3 {
+  font-size: 1.4rem;
+  margin: 0;
+  margin-top: 0.5rem;
+}

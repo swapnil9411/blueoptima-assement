@@ -1,0 +1,251 @@
+@import url("./css/widget.css");
+@import url("./css/widgetHeader.css");
+@import url("./css/widgetBody.css");
+
+/* Minimized State (Vertical) */
+.widget-container.minimized {
+  height: 220px; /* Adjust height for minimized state */
+  width: 10px; /* Narrow width for vertical appearance */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center elements vertically */
+  justify-content: center;
+  /* overflow: hidden; */
+  /* border: 1px solid red; */
+}
+.minimized-content {
+  margin-top: 5px;
+  text-align: center;
+  font-size: 12px;
+  color: #555;
+  display: flex;
+  flex-direction: column; /* Align content vertically */
+  align-items: center;
+  gap: 5px; /* Add spacing between items */
+  writing-mode: vertical-lr;
+}
+
+.minimized-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+  max-height: 80px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column; /* Ensure vertical layout */
+  gap: 5px;
+}
+
+.minimized-list-item {
+  padding: 5px 0;
+  font-size: 12px;
+  color: #333;
+  text-align: center; /* Center-align text */
+}
+
+.minimized-header {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+  gap: 3rem;
+  h3 {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    /* color: red; */
+  }
+}
+/* Header Section */
+
+.widget-header.minimized {
+  flex-direction: column; /* Stack items vertically */
+}
+
+/* Search Section */
+
+/* Minimize/Expand Button */
+.widget-controls {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.widget-controls.minimized {
+  flex-direction: column; /* Align buttons vertically */
+  gap: 10px;
+}
+
+.control-button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: #6fabe8;
+  transition: color 0.2s ease;
+}
+
+.control-button:hover {
+  color: #007bff;
+}
+
+/* Body Section */
+
+.widget-container.minimized #widget-body {
+  display: none; /* Hide body when minimized */
+}
+.widget-container.horizontal-minimized #widget-body {
+  display: none; /* Hide body when minimized */
+}
+
+/* Action Buttons */
+.action-header {
+  display: flex;
+  position: relative;
+}
+.action-header .width-15 {
+  position: absolute;
+  right: -10px;
+  top: 0px;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0px;
+  width: 100%;
+}
+
+.action-title {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #6fabe8;
+}
+
+.check-button,
+.clear-button {
+  margin-top: 0.3rem;
+  padding: 5px 10px;
+  font-size: 14px;
+  background-color: rgb(190, 190, 190);
+  color: rgb(66 162 164);
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.check-button:hover,
+.clear-button:hover {
+  color: rgb(19 80 81);
+}
+
+.cross-icon {
+  margin-right: 5px;
+  font-weight: 100;
+  font-size: 1rem;
+}
+
+/* List Section */
+.container-list {
+  display: flex;
+  width: 100%;
+}
+
+.location-list {
+  height: 20rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 500px;
+  overflow-y: auto;
+  flex: 1;
+  padding-left: 1.5rem;
+  border-bottom: 1px solid rgb(183, 182, 182);
+  padding-bottom: 0.5rem;
+}
+
+.location-item {
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+}
+
+.location-item input[type="checkbox"] {
+  margin-right: 10px;
+  width: 1rem;
+  height: 1rem;
+}
+
+.flag-icon {
+  width: 20px;
+  height: 15px;
+  margin-right: 10px;
+}
+
+.location-text {
+  font-size: 19px;
+}
+
+/* Alphabet Scroller */
+.alphabet-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.alphabet-item {
+  cursor: pointer;
+  padding: 5px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.alphabet-item:hover {
+  color: #007bff;
+  font-weight: bold;
+}
+
+/* Scrollbar Styles (Optional) */
+.location-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.location-list::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+.location-list::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
+.width-90 {
+  width: 85%;
+}
+
+.width-15 {
+  width: 15%;
+}
+.width-15 ul {
+  display: flex;
+  flex-direction: column;
+}
+.width-15 ul li {
+  padding: 2px 0;
+  font-size: 12px;
+}
+
+.horizontal-minimized {
+  width: 22rem;
+  height: 50px;
+}
+
+.lucide-icons {
+  font-size: 2rem;
+}
